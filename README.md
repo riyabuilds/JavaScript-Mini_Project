@@ -1,2 +1,4 @@
 # JavaScript-Mini_Project
-Mini_Project with Java Script
+Color Switcher 
+We have to Click the button it changes the color of background .
+
