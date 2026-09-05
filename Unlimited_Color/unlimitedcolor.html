@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unlimited color</title>
+  </head>
+  <body>
+    <strong
+      ><h2>Start should change the Background color every second</h2></strong
+    >
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const body = document.querySelector("body");
+    const start = document.querySelector("#start");
+    const stop = document.querySelector("#stop");
+
+    let intervalValue;
+
+    start.addEventListener("click", function (e) {
+      intervalValue = setInterval(() => {
+        const red = Math.floor(Math.random() * 255);
+        const green = Math.floor(Math.random() * 255);
+        const blue = Math.floor(Math.random() * 255);
+        body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+      }, 1000);
+    });
+
+    stop.addEventListener("click", function (e) {
+      clearInterval(intervalValue);
+    });
+  </script>
+</html>
